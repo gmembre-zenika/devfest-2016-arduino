@@ -16,16 +16,10 @@
 
 
 
-## Montage
+## Utilisation
 
 - Montage très simple
-![](ressources/montage_ds18b20.png)
-
-
-
-## Sketch de lecture
-- Sketch non trivial à cause du dialogue sur le bus *1 Wire*
-- ~110 lignes &rarr; 8,5 ko de flash, ~360 octets de RAM
+- sketch : ~110 lignes &rarr; 8,5 ko de flash, ~360 octets de RAM
 - exemple de sortie :
 
 ```
@@ -34,6 +28,10 @@ ROM = 28 65 DC 33 4 0 0 17
   Data = 1 43 1 4B 46 7F FF D 10 BD  CRC=BD
   Temperature = 20.19 Celsius, 68.34 Fahrenheit
 ```
+
+<figure style="position: absolute; top: 400px; left: 170px; width: 70%">
+    <img src="ressources/montage_ds18b20.png" />
+</figure>
 
 
 
@@ -90,6 +88,7 @@ Command available :
 
 
 ## Librairies
+
 - *Firmata* : **https://github.com/firmata/arduino**
   - Protocole très similaire au MIDI (commande de 8 bits, data : 7 bits)
   - Implémentation pour plusieurs micro-contrôleurs
@@ -181,66 +180,6 @@ if (type_s) {
 <figure>
 <img src="ressources/grafana-graph.png" alt="" />
 </figure>
-
-
-
-## Alimentation de la base
-
-- Appel REST sur la base *Influxdb* pour ajouter périodiquement les rélevés de temperature
- - Valeurs de la forme : ```<série> value=<valeur> [ts en ns]```
-
-```javascript
-var influx = require('influx');
-
-var client = influx({host: 'raspberrypi', port: 8086, protocol: 'http', database: 'temperature', username: '', password: ''});
-
-client.writePoint('temp', {value: valeur}, {}, function(err) {
-  if (err) console.log(err);
-});
-```
-
-
-
-## All together
-
-Programme complet, lancé depuis le *Raspberry Pi* :
-```javascript
-var influx = require('influx');
-var five = require('johnny-five');
-
-var client = influx({host: 'raspberrypi', port: 8086, protocol: 'http', database: 'temperature', username: '', password: ''});
-var board = new five.Board();
-
-board.on('ready', function() {
-  var thermometer = new five.Thermometer({
-    controller: 'DS18B20',
-    pin: 10,
-    freq: 1000
-  });
-
-  thermometer.on('data', function() {
-    console.log(this.celsius + '°C');
-    client.writePoint('temp', {value: this.celsius}, {}, function(err) {
-      if (err) console.log(err);
-    });
-  });
-});
-```
-
-
-
-## All together
-
-- Grafana
-
-<figure style="position: absolute; top: 150px; left: 0px; width: 40%; ">
-    <img src="ressources/grafana-datasource.png" alt="" />
-</figure>
-
-<figure style="position: absolute; top: 150px; right: 0; width: 60%; ">
-    <img src="ressources/grafana-dashboard.png" alt="" />
-</figure>
-
 
 
 
