@@ -22,13 +22,13 @@ Construire une station&nbsp;météo<br><span style="font-size:60%">en</span> Nod
 
 ## Qui suis-je ?
 
+- **Guillaume Membré**
+
 - Consultant et formateur chez *Zenika Nantes*
+ - Mise en place de démarche dev-ops
+ - Développeur Java depuis 10 ans, en transition sur du grails *<i class="fa fa-thumbs-up"></i>*
 
-- Mise en place de démarche dev-ops
-
-- Développeur Java depuis 10 ans, en transition sur du grails *<i class="fa fa-thumbs-up"></i>*
-
-- Mes hobbies : DIY, Raspberry Pi, Arduino
+- Mes hobbies : DIY, Raspberry Pi,<br> Arduino...
 <br><br>
 **http://www.monbook.tech**
 <br>

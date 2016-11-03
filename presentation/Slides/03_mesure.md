@@ -76,6 +76,26 @@ Command available :
 
 ## Solution plus évoluée
 
+- *Firmata* : **https://github.com/firmata/arduino**
+  - Protocole très similaire au MIDI (commande de 8 bits, data : 7 bits)
+  - Implémentation pour plusieurs micro-contrôleurs
+  - Sketch rendant l'Arduino esclave d'un hôte<br>&rArr; l'Arduino n'est plus autonome
+
+- *Johnny-five* : **http://johnny-five.io/**
+  - Lib Node.js s'interfacant avec ce protocole
+
+<br>
+*&rArr;* Le Raspberry Pi exécutera le programme en Node.js<br> pour piloter l'Arduino
+
+<figure style="position: absolute; top: 300px; width: 50%; right: -100px;">
+    <img src="ressources/heres-johnny.png" alt="" />
+</figure>
+
+
+
+## Mise en oeuvre
+
+- Documenté, illustré, libre et open source
 - Utiliser un protocole binaire d'échange sur le port série
  - Transmission plus fiable
  - Sketch spécifique sur l'Arduino
@@ -87,32 +107,11 @@ Command available :
 
 
 
-## Librairies
-
-- *Firmata* : **https://github.com/firmata/arduino**
-  - Protocole très similaire au MIDI (commande de 8 bits, data : 7 bits)
-  - Implémentation pour plusieurs micro-contrôleurs
-  - Sketch rendant l'Arduino esclave d'un hôte<br>&rArr; l'Arduino n'est plus autonome
-  - Documenté, libre et open source
-
-- *Johnny-five* : **http://johnny-five.io/**
-  - Lib Node.js s'interfacant avec ce protocole
-  - Documentée, illustrée, libre et open source
-
-<br>
-*&rArr;* Le Raspberry Pi exécutera le programme en Node.js<br> pour piloter l'Arduino
-
-<figure style="position: absolute; top: 300px; width: 50%; right: -100px;">
-    <img src="ressources/heres-johnny.png" alt="" />
-</figure>
-
-
-
 ## Johnny-five
 
 - *Johnny-five* intègre une API de très haut niveau s'interfaçant avec :
  - de nombreux composants du marché : servo, relais, moteur pas à pas, altimètre, LCD...
- - les bus les plus répandu : I2C et OneWire
+ - les bus les plus répandu : OneWire et I2C
 - Hello world :
 
 ```javascript
@@ -207,7 +206,7 @@ if (type_s) {
 ## Et ensuite ?
 
 - A ce niveau, il va devenir aisé d'ajouter des nouveaux capteurs :
-  - *DHT11* : mesure d'humidité
+  - *DHT22* : mesure d'humidité
   - *BMP180* : capteur de pression atmosphérique
   - Capteur d'humidité de sol
   - ...

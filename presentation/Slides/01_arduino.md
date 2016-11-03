@@ -21,17 +21,37 @@
 
 
 
-## Usages
+## Arduino
 
-- Shéma electronique libre
-- Logiciels libres et gratuits :
+- Philosophie "Open hardware"
+ - Shéma electronique libre
+ - Logiciels libres et gratuits :
   - bootloader ( &asymp; "bios/UEFI d'un PC" )
   - SDK + chaine de cross compilation + IDE simple
-- Pas de système d'exploitation
-- Uniquement le programme s'exécute dessus.
-- Gestion des interruptions à coder si necessaire
-- Le debug se fait à coup de reboot et à la LED...
-- Pas de BSOD :'(
+- Logiciels
+ - Pas de système d'exploitation
+ - Uniquement le programme s'exécute dessus.
+ - Gestion des interruptions à coder si necessaire
+ - Le debug se fait à coup de reboot et à la LED...
+ - <span style="color: #0000aa">Pas de BSOD :'(</span>
+
+<figure style="position: absolute; top: 500px; right: 0; width: 30%">
+   <img src="ressources/arduino_Logo.png" alt=""/>
+</figure>
+
+
+
+## Raisons du succès ?
+<br>
+
+> Pour programmer un micro-contrôleur, <br>il faut un micro-contrôleur programmé...
+
+<br>
+*Problème de la poule et l'oeuf*
+
+<figure style="position: absolute; left: 300px; top: 250px">
+    <img src="ressources/poule_oeuf_fond_blanc.png" alt=""/>
+</figure>
 
 
 
