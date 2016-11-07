@@ -1,4 +1,4 @@
 # Devfest 2016 : Construire une station météo en NodeJS avec un Raspberry PI et un Arduino
 
-- Vidéo : 
-- Slides : [HTML](https://gmembre-zenika.github.io/devfest-2016-arduino)
+- Vidéo :
+- Slides : [HTML](https://gmembre-zenika.github.io/devfest-2016-arduino) [PDF](https://gmembre-zenika.github.io/devfest-2016-arduino/slides.pdf)
