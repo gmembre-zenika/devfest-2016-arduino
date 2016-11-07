@@ -19,7 +19,7 @@
 ## Utilisation
 
 - Montage très simple
-- sketch : ~110 lignes &rarr; 8,5 ko de flash, ~360 octets de RAM
+- sketch : écrit en C, ~110 lignes &rarr; 8,5 ko de flash, ~360 octets de RAM
 - exemple de sortie :
 
 ```

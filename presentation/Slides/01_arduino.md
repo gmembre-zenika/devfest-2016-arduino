@@ -26,8 +26,8 @@
 - Philosophie "Open hardware"
  - Shéma electronique libre
  - Logiciels libres et gratuits :
-  - bootloader ( &asymp; "bios/UEFI d'un PC" )
-  - SDK + chaine de cross compilation + IDE simple
+   - bootloader ( &asymp; "bios/UEFI d'un PC" )
+   - SDK + chaine de cross compilation + IDE simple
 - Logiciels
  - Pas de système d'exploitation
  - Uniquement le programme s'exécute dessus.
@@ -60,7 +60,7 @@
 - USB avec un PC
 - Alimentation de la carte
 - Port série émulé sur USB
-- Le SDK fournit des primitives
+- Le SDK fournit des primitives<br> de communication série
 - Coté hôte, il suffit d'ouvrir un<br> terminal série
     - soit celui de l'IDE
     - ```cu``` sous linux
